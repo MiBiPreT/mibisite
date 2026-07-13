@@ -58,7 +58,7 @@ testpaths = ["tests"]
 
 [tool.coverage.run]
 branch = true
-source = ["src/mibisite"]
+source = ["mibisite"]
 command_line = "-m pytest"
 
 [tool.tox]
@@ -115,7 +115,7 @@ no-lines-before = ["future","standard-library","third-party","first-party","loca
 current_version = "0.1.0"
 
 [[tool.bumpversion.files]]
-filename = "src/mibisite/__init__.py"
+filename = "mibisite/__init__.py"
 
 [[tool.bumpversion.files]]
 filename = "pyproject.toml"
