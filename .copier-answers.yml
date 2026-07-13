@@ -1,0 +1,34 @@
+# Changes here will be overwritten by Copier
+SelectCitation:
+- AddCitationFile_flag
+- AddCFFConvert_flag
+SelectCodeQualityFeatures:
+- AddLocalTests_flag
+- SelectGitHubActions_flag
+- AddLinting_flag
+- AddSonarCloud_flag
+SelectCommunityFeatures:
+- AddCodeConduct_flag
+- AddContributing_flag
+SelectDocumentationFeatures:
+- AddDevDoc_flag
+SelectGitHubActions:
+- AddGitHubActionBuild_flag
+SelectPublishReleaseFeatures:
+- SelectCitation_flag
+- AddZenodo_flag
+_commit: 0.6.1
+_src_path: https://github.com/nlesc/python-template.git
+code_of_conduct_email: j.camphuijsen@esciencecenter.nl
+copyright_holder: Netherlands eScience Center, Utrecht University, University Hasselt,
+    DND biotech
+email: j.camphuijsen@esciencecenter.nl
+full_name: Jaro Camphuijsen
+github_organization: MiBiPreT
+keywords: Microbiome, bioremediation
+license: Apachev2
+package_name: mibisite
+package_short_description: Python package to generate a Mibipret Site object, the
+    first step and central data structure in a Mibipret workflow
+template_profile: ask
+version: 0.1.0
