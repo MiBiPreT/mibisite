@@ -1,5 +1,5 @@
 site_name: mibisite
-site_description: A collection of analytical and semi-semianalytical solutions for hydrogeological transport phenomena
+site_description: A standard, centralized data object to describe and model Mibirem field sites
 site_author: Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen
 site_url: https://MiBiPreT.github.io/mibisite
 repo_name: MiBiPreT/mibisite
