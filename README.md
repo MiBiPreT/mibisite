@@ -41,3 +41,58 @@ have a look at the [contribution guidelines](CONTRIBUTING.md).
 ## Credits
 
 This package was created with [Copier](https://github.com/copier-org/copier) and the [NLeSC/python-template](https://github.com/NLeSC/python-template).
+
+
+## Mibisite design docs
+
+### Purpose
+
+`mibisite` combines and standardizes the various data that are relevant to bioremediation modeling
+and analysis into a single data object with functionality for visualization of the field site data
+and exporting it to common formats.
+
+### Types of data in a Mibisite object
+
+- Perimeter (shapeobject) required
+
+- Landmarks (shapeobject) optional
+
+- Site parameters
+    - Site max depth
+    - Hydrological parameters (from mibitrans)
+    - Attenuation parameters (from mibitrans)
+
+- 2D/3D data fields (on regular, irregular grids)
+    - mibitrans simulations
+
+- Source
+    - Point (location, depth, chemical)
+    - Area (2D shapefile, chemical) future
+    - Volume (3D) future
+    - Source parameters (from mibitrans) ??
+
+- Observation well (well_name, coordinates, metadata*)
+
+- Sample (name, well_name, time, depth, variables)
+
+- Injection wells (well_name, pumping_rate, mainly water, chemicals, nutrients, bacteria)
+
+- Extraction wells
+
+### Example use
+
+from mibisite import Mibisite
+import mibiscreen as mbs
+import mibitrans as mbt
+
+mysite = Mibisite()
+
+
+mysite.add_well(well_type="observation", )
+mysite.plot()
+
+mbs.screen(mysite)
+
+
+new_field = mbt.model(mysite)
+mysite.addfield(new_field)
