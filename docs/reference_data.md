@@ -1,0 +1,4 @@
+# `mibisite` API reference
+
+::: mibisite
+
