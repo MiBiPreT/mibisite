@@ -142,7 +142,7 @@ exclude = [
     ".venv",
     "scripts",
 ]
-lint.per-file-ignores = {"mibitrans/__init__.py"=["F401","I001"]}
+lint.per-file-ignores = {"mibisite/__init__.py"=["F401","I001"]}
 
 # Allow unused variables when underscore-prefixed.
 lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
@@ -151,7 +151,7 @@ target-version = "py310"
 line-length = 120
 
 [tool.ruff.lint.isort]
-known-first-party = ["mibitrans"]
+known-first-party = ["mibisite"]
 force-single-line = true
 no-lines-before = ["future","standard-library","third-party","first-party","local-folder"]
 
