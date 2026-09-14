@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A collection of analytical and semi-semianalytical solutions for hydrogeological transport phenomena">
+        <meta name="description" content="A standard, centralized data object to describe and model Mibirem field sites">
       
       
         <meta name="author" content="Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen">
@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="basic_use_of_mibisite/">
+        <link rel="next" href="development/">
       
       
         
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="basic_use_of_mibisite/" class="md-tabs__link">
+      <a href="basic_use_of_mibisite.ipynb" class="md-tabs__link">
         
   
   
@@ -420,10 +420,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-mibitrans" class="md-nav__link">
+  <a href="#badges" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use mibitrans
+        Badges
       
     </span>
   </a>
@@ -435,6 +435,39 @@
     <span class="md-ellipsis">
       
         Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
       
     </span>
   </a>
@@ -456,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basic_use_of_mibisite/" class="md-nav__link">
+      <a href="basic_use_of_mibisite.ipynb" class="md-nav__link">
         
   
   
@@ -557,10 +590,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-mibitrans" class="md-nav__link">
+  <a href="#badges" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use mibitrans
+        Badges
       
     </span>
   </a>
@@ -572,6 +605,39 @@
     <span class="md-ellipsis">
       
         Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
       
     </span>
   </a>
@@ -599,20 +665,36 @@
 
 
 <h1 id="documention-for-mibitrans-python-package">Documention for <code>mibitrans</code> python package</h1>
-<p><code>mibitrans</code> is an open-source Python-based modeling tool designed for rapid screening of contaminant transport at field sites impacted by petroleum hydrocarbons under natural flow conditions. The tool implements a suite of analytical solutions to the advection–dispersion equation, offering flexible model configurations, multiple representations of (bio)degradation processes, streamlined data handling and visualization capabilities. Its modular architecture allows for straightforward extension and adaptation to site-specific needs.</p>
-<p><code>mibitrans</code> can be used to address key questions in contaminated site management, including the feasibility of natural attenuation, expected plume development and spatial extent, and the relative importance of governing transport and degradation processes. It is particularly suited for early-stage site assessment, where fast and robust estimates of plume behavior, mass balances, and parameter sensitivity are required. In addition, the tool allows performing parameter calibration based on field observations and provides a benchmark for more complex numerical models.</p>
-<p>Compared to conventional numerical approaches, <code>mibitrans</code> enables fast model setup and execution while maintaining conceptual rigor. Its transparent implementation, comprehensive documentation, and relative ease of use makes it accessible to both researchers and practitioners. Beyond research and suitable for practical use, <code>mibitrans</code> is particularly valuable in higher education and professional training, where its intuitive setup and rapid feedback facilitate the teaching of core concepts in contaminant transport, support hands-on learning, and help bridge the gap between theoretical understanding and the application of advanced numerical modeling tools.</p>
-<h2 id="how-to-use-mibitrans">How to use mibitrans</h2>
-<p>Using your preferred Python IDE, install Mibitrans, specify the field conditions and visualize the contaminant distribution.</p>
-<p><img alt="Comparison between different mibitrans models" src="assets/model_comparison_trans.svg" /></p>
-<p><img alt="Plume animation of Mibitrans model" src="assets/plume_animation.gif" /></p>
-<p>Look at the examples section for detailed explanation on how to use mibitrans.</p>
+<h2 id="badges">Badges</h2>
+<p><a href="https://github.com/MiBiPreT/mibisite"><img alt="github repo badge" src="https://img.shields.io/badge/github-repo-000.svg?logo=github&amp;labelColor=gray&amp;color=blue" /></a>
+<a href="https://github.com/MiBiPreT/mibisite"><img alt="github license badge" src="https://img.shields.io/github/license/MiBiPreT/mibisite" /></a>
+<a href="https://www.research-software.nl/software/mibisite"><img alt="RSD" src="https://img.shields.io/badge/rsd-mibisite-00a3e3.svg" /></a>
+<a href="https://pypi.python.org/project/mibisite/"><img alt="workflow pypi badge" src="https://img.shields.io/pypi/v/mibisite.svg?colorB=blue" /></a>
+<a href="https://fair-software.eu"><img alt="fair-software badge" src="https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B-yellow" /></a>
+<a href="https://sonarcloud.io/dashboard?id=MiBiPreT_mibisite"><img alt="workflow scq badge" src="https://sonarcloud.io/api/project_badges/measure?project=MiBiPreT_mibisite&amp;metric=alert_status" /></a>
+<a href="https://sonarcloud.io/dashboard?id=MiBiPreT_mibisite"><img alt="workflow scc badge" src="https://sonarcloud.io/api/project_badges/measure?project=MiBiPreT_mibisite&amp;metric=coverage" /></a>
+<a href="https://github.com/MiBiPreT/mibisite/actions/workflows/build.yml"><img alt="build" src="https://github.com/MiBiPreT/mibisite/actions/workflows/build.yml/badge.svg" /></a>
+<a href="https://github.com/MiBiPreT/mibisite/actions/workflows/cffconvert.yml"><img alt="cffconvert" src="https://github.com/MiBiPreT/mibisite/actions/workflows/cffconvert.yml/badge.svg" /></a>
+<a href="https://github.com/MiBiPreT/mibisite/actions/workflows/sonarcloud.yml"><img alt="sonarcloud" src="https://github.com/MiBiPreT/mibisite/actions/workflows/sonarcloud.yml/badge.svg" /></a></p>
+<!-- [![DOI](https://zenodo.org/badge/DOI/<replace-with-created-DOI>.svg)](https://doi.org/<replace-with-created-DOI>) -->
+<!-- [![workflow cii badge](https://bestpractices.coreinfrastructure.org/projects/<replace-with-created-project-identifier>/badge)](https://bestpractices.coreinfrastructure.org/projects/<replace-with-created-project-identifier>) -->
+
+<p><code>mibisite</code> combines and standardizes the various data that are relevant to bioremediation modeling
+and analysis into a single data object with functionality for visualization of the field site data
+and exporting it to common formats.</p>
 <h2 id="installation">Installation</h2>
-<p>To install mibitrans from GitHub repository, do:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">git clone git@github.com:MiBiPreT/mibitrans.git</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">cd mibitrans</span>
+<p>To install mibisite from GitHub repository, do:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">git clone git@github.com:MiBiPreT/mibisite.git</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">cd mibisite</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">python -m pip install .</span>
 </code></pre></div>
+<h2 id="documentation">Documentation</h2>
+<p>Include a link to your project&rsquo;s full documentation here.</p>
+<h2 id="contributing">Contributing</h2>
+<p>If you want to contribute to the development of mibisite,
+have a look at the <a href="CONTRIBUTING.md">contribution guidelines</a>.</p>
+<h2 id="credits">Credits</h2>
+<p>This package was created with <a href="https://github.com/copier-org/copier">Copier</a> and the <a href="https://github.com/NLeSC/python-template">NLeSC/python-template</a>.</p>
 
 
 
