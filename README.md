@@ -89,7 +89,9 @@ import mibitrans as mbt
 mysite = Mibisite()
 
 
-mysite.add_well(well_type="observation", )
+mysite.add_well(
+    well_type="observation",
+)
 mysite.plot()
 
 mbs.screen(mysite)

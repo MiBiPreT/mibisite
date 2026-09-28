@@ -1,4 +1,5 @@
 """Documentation about mibisite."""
+
 import logging
 from mibisite.mibisite import Mibisite
 
