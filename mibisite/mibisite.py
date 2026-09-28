@@ -1,27 +1,27 @@
 """Documentation about the mibisite module."""
 import pandas as pd
+import geopandas as gpd
 from geopandas import GeoDataFrame
 from shapely import MultiPolygon
 from shapely import Point
+import matplotlib.pyplot as plt
+import contextily as cx
 
-
-class SiteProperties(GeoDataFrame):
-    """Class deriving from GeoDataFrame holding a site perimeter, and some other properties."""
-
-    def __init__(self, perimeter: MultiPolygon = None, depth:float = None, mean_flow_velocity:float = None, ):
-        """Initialize SiteProperties object."""
-        self.perimeter = perimeter
-        self.depth = depth
-        self.mean_flow_velocity = mean_flow_velocity
 
 
 class Mibisite:
     """Class that holds can contain all data and models for a Mibipret (field/experimental) site."""
 
-    def __init__(self, name : str):
+    def __init__(self, name : str, perimeter_shapefile:str = None, landmarks_shapefile:str = None):
         """Initialize SiteProperties object."""
         self.name : str = name
+        if perimeter_shapefile:
+            self.perimeter = gpd.read_file(perimeter_shapefile).set_crs(crs="EPSG:4326")
+        if landmarks_shapefile:
+            self.landmarks = gpd.read_file(landmarks_shapefile).set_crs(crs="EPSG:4326")
+
         self.site_properties: SiteProperties = None
+        self.wells = None
         self.observation_wells = GeoDataFrame(
             columns = ["name", "coordinates", "well_type"], geometry = "coordinates",
             crs="EPSG:4326",
@@ -30,6 +30,16 @@ class Mibisite:
             columns = ["name", "coordinates", "well_type"], geometry = "coordinates",
             crs="EPSG:4326",
             )
+
+
+    def load_wells(self, wells_filename):
+        """Load wells data from a csv file into the Mibisite object"""
+        wells_df = gpd.read_file(wells_filename)
+        self.observation_wells = GeoDataFrame(
+            wells_df,
+            geometry=gpd.points_from_xy(wells_df.latitude, wells_df.longitude),
+            crs="EPSG:4326"
+            ).drop(["latitude", "longitude"], axis=1)
 
 
     def add_well(self, name:str, coordinates:Point, well_type:str):
@@ -50,8 +60,10 @@ class Mibisite:
 
     def show_map(self):
         """Show the map of your fieldsite with several optional layers of information."""
-        pass
+        fig, ax = plt.subplots(figsize=(15,12))
+        ax.set_title(self.name + " fieldsite", fontsize=20)
+        self.perimeter.boundary.plot(ax=ax, color="green")
+        self.landmarks.boundary.plot(ax=ax, color="gray")
+        self.observation_wells.plot(ax=ax, column="subtype")
+        cx.add_basemap(ax, alpha=0.5, crs="EPSG:4326")
 
-
-    def save_sikb():
-        """Store the Mibisite object as a SIKB1010 standard .xml file."""
