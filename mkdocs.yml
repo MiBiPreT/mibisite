@@ -1,5 +1,5 @@
 site_name: mibisite
-site_description: A collection of analytical and semi-semianalytical solutions for hydrogeological transport phenomena
+site_description: Python package to enable creation of a Mibipret site object, the initial step and connecting data structure for the Mibipret ecosystem
 site_author: Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen
 site_url: https://MiBiPreT.github.io/mibisite
 repo_name: MiBiPreT/mibisite
@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2026 Robin Richardson, Jaro Camphuijsen
 
 nav:
   - Home: index.md
-  - Example: basic_use_of_mibisite.ipynb
+  - How to: user.md
   - Development: development.md
   - API Reference: reference.md
 

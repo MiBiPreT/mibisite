@@ -15,3 +15,10 @@ git clone git@github.com:MiBiPreT/mibisite.git
 cd mibisite
 python -m pip install .
 ```
+
+## Example usage
+
+![alt text](assets/MIBIREM_GA24_WP4_UU_1.png)
+![alt text](assets/MIBIREM_GA24_WP4_UU_2.png)
+![alt text](assets/MIBIREM_GA24_WP4_UU_3.png)
+![alt text](assets/MIBIREM_GA24_WP4_UU_4.png)

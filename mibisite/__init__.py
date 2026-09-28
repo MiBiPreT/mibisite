@@ -1,6 +1,6 @@
 """Documentation about mibisite."""
-
 import logging
+from mibisite.mibisite import Mibisite
 
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
