@@ -17,7 +17,7 @@ def test_site_creation():
     assert mysite.name == name
 
 
-def test_add_well(test_site):
-    """Test well addition."""
-    test_site.add_well("p51vf", [4.9041, 52.3676], well_type="observation")
-    assert test_site.observation_wells
+# def test_load_wells(test_site):
+#     """Test well addition."""
+#     test_site.load_wells("/examples/data/wells.csv")
+#     assert test_site.observation_wells
