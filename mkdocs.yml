@@ -10,6 +10,7 @@ copyright: Copyright &copy; 2026 Robin Richardson, Jaro Camphuijsen
 nav:
   - Home: index.md
   - How to: user.md
+  - Example: examples/basic_use_of_mibisite.ipynb
   - Development: development.md
   - API Reference: reference.md
 

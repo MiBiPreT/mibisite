@@ -81,6 +81,7 @@ and exporting it to common formats.
 
 ### Example use
 
+```python
 from mibisite import Mibisite
 import mibiscreen as mbs
 import mibitrans as mbt
@@ -96,3 +97,4 @@ mbs.screen(mysite)
 
 new_field = mbt.model(mysite)
 mysite.addfield(new_field)
+```
