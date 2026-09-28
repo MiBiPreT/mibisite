@@ -1,5 +1,5 @@
 site_name: mibisite
-site_description: A standard, centralized data object to describe and model Mibirem field sites
+site_description: A standard, centralized data structure to describe, analyze and model field sites for bioremediation
 site_author: Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen
 site_url: https://MiBiPreT.github.io/mibisite
 repo_name: MiBiPreT/mibisite
@@ -9,7 +9,8 @@ copyright: Copyright &copy; 2026 Robin Richardson, Jaro Camphuijsen
 
 nav:
   - Home: index.md
-  - Example: basic_use_of_mibisite.ipynb
+  - How to: user.md
+  - Example: examples/basic_use_of_mibisite.ipynb
   - Development: development.md
   - API Reference: reference.md
 

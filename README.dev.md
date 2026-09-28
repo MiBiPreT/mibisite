@@ -19,8 +19,6 @@ python -m pip install --upgrade pip setuptools
 python -m pip install --no-cache-dir --editable .
 # install development dependencies
 python -m pip install --no-cache-dir --editable .[dev]
-# install documentation dependencies only
-python -m pip install --no-cache-dir --editable .[docs]
 ```
 
 Afterwards check that the install directory is present in the `PATH` environment variable.
@@ -60,9 +58,11 @@ To see the results on the command line, run
 coverage report
 ```
 
-`coverage` can also generate output in HTML and other formats; see `coverage help` for more information.## Running linters locally
+`coverage` can also generate output in HTML and other formats; see `coverage help` for more information.
 
-For linting and sorting imports we will use [ruff](https://beta.ruff.rs/docs/). Running the linters requires an
+## Running linters locally
+
+For linting and sorting imports we will use [ruff](https://beta.ruff.rs/docs/). Running the linters requires an 
 activated virtual environment with the development tools installed.
 
 ```shell
@@ -73,35 +73,55 @@ ruff check .
 ruff check . --fix
 ```
 
-To fix readability of your code style you can use [yapf](https://github.com/google/yapf).## Generating the API docs
+To fix readability of your code style you can use [yapf](https://github.com/google/yapf).
+
+You can enable automatic linting with `ruff` on commit by enabling the git hook from `.githooks/pre-commit`, like so:
 
 ```shell
-cd docs
-make html
+git config --local core.hooksPath .githooks
 ```
 
-The documentation will be in `docs/_build/html`
+## Cleaning notebooks
 
-If you do not have `make` use
+The linter tests now also check that the example notebooks are "clean". This means they do not contain the output and execution metadata that
+Jupyter adds when you execute them. Removing this reduces the size and noisiness of the diffs and consequently makes reviewing changes easier.
 
+To clean the notebooks locally before each commit, you can use the `nb-clean` tool, which is listed as one of the `[dev]` dependencies of the project. They are installable
+with:
+```
+python -m pip install .[dev]
+```
+
+You can then run:
+```
+nb-clean add-filter
+```
+This adds a git hook that will automatically clean any staged notebooks before they are committed. If you would rather run this manually, you can instead use:
+```
+nb-clean clean mynotebook.ipynb
+```
+replacing with the name of the notebook in question.
+
+
+
+
+## Testing docs locally
+
+To build the documentation locally, first make sure `mkdocs` and its dependencies are installed:
 ```shell
-sphinx-build -b html docs docs/_build/html
+python -m pip install .[doc]
 ```
 
-To find undocumented Python objects run
-
+Then you can build the documentation and serve it locally with
 ```shell
-cd docs
-make coverage
-cat _build/coverage/python.txt
+mkdocs serve
 ```
 
-To [test snippets](https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html) in documentation run
+This will return a URL (e.g. `http://127.0.0.1:8000/mibisite/`) where the docs site can be viewed.
 
-```shell
-cd docs
-make doctest
-```
+Note that this will only create the "non-versioned" documentation, which should be fine for testing changes to the docs.
+The versioned documentation is created using the python utility called [mike](https://github.com/jimporter/mike?tab=readme-ov-file#mike) and its corresponding [mkdocs integration](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/).
+In general it should not be necessary to test this, but if necessary, use [the mike documentation](https://github.com/jimporter/mike?tab=readme-ov-file#viewing-your-docs) to inspect locally.
 
 ## Versioning
 
@@ -114,73 +134,32 @@ bump-my-version bump patch  # bumps from e.g. 0.3.2 to 0.3.3
 ```
 
 ## Making a release
+To create a release you need write permission on the repository.
 
-This section describes how to make a release in 3 parts:
+This section describes how to make a release:
 
 1. preparation
-1. making a release on PyPI
 1. making a release on GitHub
 
-### (1/3) Preparation
+### (1/2) Preparation
 
-
-1. Verify that the information in [`CITATION.cff`](CITATION.cff) is correct.
+1. Checkout the main branch locally
+1. Verify that the information (especially the author list) in `CITATION.cff` is correct.
 1. Make sure the [version has been updated](#versioning).
 1. Run the unit tests with `pytest -v`
+1. Make sure the [docs build and look good](#testing-docs-locally)
 
-### (2/3) PyPI
 
-In a new terminal:
+### (2/2) GitHub
 
-```shell
-# OPTIONAL: prepare a new directory with fresh git clone to ensure the release
-# has the state of origin/main branch
-cd $(mktemp -d mibisite.XXXXXX)
-git clone git@github.com:MiBiPreT/mibisite .
+When all is well, navigate to the [releases on GitHub](https://github.com/MiBiPreT/mibisite/releases).
 
-# make sure to have a recent version of pip and the publishing dependencies
-python -m pip install --upgrade pip
-python -m pip install .[publishing]
+1. Press draft a new release button
+1. Select the "Choose a tag" drop down and write out the new version (e.g. v1.3.2)
+1. Press "Generate release notes" to automatically fill the title (with the version number) and generate a description (the changelog from the merge pull requests)
+1. Press the Publish release button
 
-# create the source distribution and the wheel
-python -m build
+This will create the release on github and automatically trigger:
 
-# upload to test pypi instance (requires credentials)
-python -m twine upload --repository testpypi dist/*
-```
-
-Visit
-[https://test.pypi.org/project/mibisite](https://test.pypi.org/project/mibisite)
-and verify that your package was uploaded successfully. Keep the terminal open, we'll need it later.
-
-In a new terminal, without an activated virtual environment or an env directory:
-
-```shell
-cd $(mktemp -d mibisite-test.XXXXXX)
-
-# prepare a clean virtual environment and activate it
-python -m venv env
-source env/bin/activate
-
-# make sure to have a recent version of pip and setuptools
-python -m pip install --upgrade pip
-
-# install from test pypi instance:
-python -m pip -v install --no-cache-dir \
---index-url https://test.pypi.org/simple/ \
---extra-index-url https://pypi.org/simple mibisite
-```
-
-Check that the package works as it should when installed from pypitest.
-
-Then upload to pypi.org with:
-
-```shell
-# Back to the first terminal,
-# FINAL STEP: upload to PyPI (requires credentials)
-python -m twine upload dist/*
-```
-
-### (3/3) GitHub
-
-Don't forget to also make a [release on GitHub](https://github.com/MiBiPreT/mibisite/releases/new).GitHub-Zenodo integration will also trigger Zenodo into making a snapshot of your repository and sticking a DOI on it.
+1. The `.github/workflows/publish.yml` workflow which will build the package and publish it on PyPI
+1. The Zenodo-Github integration into making a snapshot of your repository and sticking a DOI on it and adding the new version to the main Zenodo entry for your software.
