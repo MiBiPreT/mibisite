@@ -29,6 +29,7 @@ dependencies = [
     "pandas",
     "geopandas",
     "shapely",
+    "contextily",
 ]
 
 description = "Python package to generate a Mibipret Site object, the first step and central data structure in a Mibipret workflow"
