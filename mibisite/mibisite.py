@@ -1,12 +1,10 @@
 """Documentation about the mibisite module."""
-import pandas as pd
-import geopandas as gpd
-from geopandas import GeoDataFrame
-from shapely import MultiPolygon
-from shapely import Point
-import matplotlib.pyplot as plt
 import contextily as cx
-
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import pandas as pd
+from geopandas import GeoDataFrame
+from shapely import Point
 
 
 class Mibisite:
@@ -20,7 +18,6 @@ class Mibisite:
         if landmarks_shapefile:
             self.landmarks = gpd.read_file(landmarks_shapefile).set_crs(crs="EPSG:4326")
 
-        self.site_properties: SiteProperties = None
         self.wells = None
         self.observation_wells = GeoDataFrame(
             columns = ["name", "coordinates", "well_type"], geometry = "coordinates",
@@ -33,7 +30,7 @@ class Mibisite:
 
 
     def load_wells(self, wells_filename):
-        """Load wells data from a csv file into the Mibisite object"""
+        """Load wells data from a csv file into the Mibisite object."""
         wells_df = gpd.read_file(wells_filename)
         self.observation_wells = GeoDataFrame(
             wells_df,
