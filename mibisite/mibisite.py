@@ -47,3 +47,5 @@ class Mibisite:
         print("Look I'm plotting!")
 
 
+    def show_map(self):
+        pass
