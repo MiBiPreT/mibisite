@@ -1,5 +1,5 @@
 site_name: mibisite
-site_description: Python package to enable creation of a Mibipret site object, the initial step and connecting data structure for the Mibipret ecosystem
+site_description: A standard, centralized data structure to describe, analyze and model field sites for bioremediation
 site_author: Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen
 site_url: https://MiBiPreT.github.io/mibisite
 repo_name: MiBiPreT/mibisite
