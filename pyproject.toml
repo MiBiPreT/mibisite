@@ -18,20 +18,33 @@ classifiers = [
     "",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "pandas",
+    "geopandas",
+    "shapely",
+    "contextily",
+]
+
 description = "Python package to generate a Mibipret Site object, the first step and central data structure in a Mibipret workflow"
 keywords = ["Microbiome"," bioremediation"]
 license = {file = "LICENSE"}
 name = "mibisite"
 readme = {file = "README.md", content-type = "text/markdown"}
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 version = "0.1.0"
 
 [project.optional-dependencies]
+example = [
+    "mibitrans",
+    "mibiscreen",
+]
+
 dev = [
     "build",  # build is not only used in publishing (below), but also in the template's test suite
     "bump-my-version",
@@ -42,6 +55,7 @@ dev = [
     "tox",
     "myst_parser",
 ]
+
 publishing = [
     "build",
     "twine",
@@ -51,7 +65,7 @@ publishing = [
 doc = [
     "mkdocs >=1.4.2",
     "mkdocs-material >=8.2.7",
-    "mkdocstrings[python] ==0.27.0",
+    "mkdocstrings[python] >=1.0.7",
     "mdx-include >=1.4.1",
     "mkdocs-markdownextradata-plugin >=0.2.5",
     "mike >=2.1.3",
@@ -141,6 +155,7 @@ exclude = [
     "venv",
     ".venv",
     "scripts",
+    "tests",
 ]
 lint.per-file-ignores = {"mibisite/__init__.py"=["F401","I001"]}
 
