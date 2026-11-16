@@ -38,13 +38,13 @@ class Mibisite:
             wells_df, geometry=gpd.points_from_xy(wells_df.latitude, wells_df.longitude), crs="EPSG:4326"
         ).drop(["latitude", "longitude"], axis=1)
 
-    def add_well(self, name: str, coordinates: Point, well_type: str):
+    def add_well(self, name: str, coordinates: tuple, well_type: str):
         """Add a well to your Mibisite object."""
         coordinates = Point(coordinates[0], coordinates[1])
         well_dict = {
-            "name": name,
-            "coordinates": coordinates,
-            "well_type": well_type,
+            "name": [name],
+            "coordinates": [coordinates],
+            "well_type": [well_type],
         }
         df_new = GeoDataFrame(
             well_dict,
@@ -52,14 +52,18 @@ class Mibisite:
             crs="EPSG:4326",
         )
         if well_type == "observation":
-            self.observation_wells = pd.concat(self.observation_wells, df_new)
+            self.observation_wells = pd.concat([self.observation_wells, df_new])
 
         elif well_type == "pumping":
-            self.pumping_wells = pd.concat(self.pumping_wells, df_new)
+            self.pumping_wells = pd.concat([self.pumping_wells, df_new])
+
+    def create_perimeter_from_wells(self, margin, direction):
+        """Create perimeter by creating a bounding box around loaded well location."""
+        pass
 
     def show_map(self):
         """Show the map of your fieldsite with several optional layers of information."""
-        fig, ax = plt.subplots(figsize=(15, 12))
+        _, ax = plt.subplots(figsize=(15, 12))
         ax.set_title(self.name + " fieldsite", fontsize=20)
         self.perimeter.boundary.plot(ax=ax, color="green")
         self.landmarks.boundary.plot(ax=ax, color="gray")
