@@ -11,7 +11,10 @@ nav:
   - Home: index.md
   - How to: user.md
   - Example: examples/basic_use_of_mibisite.ipynb
-  - Development: development.md
+  - Contributing:
+    - Contributing: CONTRIBUTING.md
+    - Development: README.dev.md
+    - Code of Conduct: CODE_OF_CONDUCT.md
   - API Reference: reference.md
 
 theme:
@@ -58,9 +61,8 @@ plugins:
     default_handler: python
     handlers:
       python:
-        rendering:
-          show_source: true
         options:
+          show_source: true
           show_submodules: true
 - mkdocs-jupyter:
     execute: true
