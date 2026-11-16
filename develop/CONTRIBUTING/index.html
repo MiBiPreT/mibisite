@@ -12,31 +12,31 @@
         <meta name="author" content="Alraune Zech, Jorrit Bakker, Robin Richardson, Jaro Camphuijsen">
       
       
-        <link rel="canonical" href="https://MiBiPreT.github.io/mibisite/develop/development/">
+        <link rel="canonical" href="https://MiBiPreT.github.io/mibisite/develop/CONTRIBUTING/">
       
       
         <link rel="prev" href="../examples/basic_use_of_mibisite/">
       
       
-        <link rel="next" href="../reference/">
+        <link rel="next" href="../README.dev/">
       
       
         
       
       
       <link rel="icon" href="../assets/icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Development - mibisite</title>
+        <title>Contributing - mibisite</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mibisite-developer-documentation" class="md-skip">
+        <a href="#contributing-guidelines" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Development
+              Contributing
             
           </span>
         </div>
@@ -297,17 +297,20 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
   
   
     
   
-  Development
+  Contributing
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -463,6 +466,71 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -478,7 +546,7 @@
   <span class="md-ellipsis">
     
   
-    Development
+    Contributing
   
 
     
@@ -496,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    Development
+    Contributing
   
 
     
@@ -522,10 +590,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-install" class="md-nav__link">
+  <a href="#you-have-a-question" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Development install
+        You have a question
       
     </span>
   </a>
@@ -533,38 +601,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-tests" class="md-nav__link">
+  <a href="#you-think-you-may-have-found-a-bug" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the tests
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running the tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-coverage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Test coverage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-linters-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running linters locally
+        You think you may have found a bug
       
     </span>
   </a>
@@ -572,10 +612,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cleaning-notebooks" class="md-nav__link">
+  <a href="#you-want-to-make-some-kind-of-change-to-the-code-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cleaning notebooks
+        You want to make some kind of change to the code base
       
     </span>
   </a>
@@ -583,69 +623,83 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testing-docs-locally" class="md-nav__link">
+  <a href="#you-want-to-make-a-new-release-of-the-code-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Testing docs locally
+        You want to make a new release of the code base
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versioning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#making-a-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Making a release
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Making a release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#12-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (1/2) Preparation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (2/2) GitHub
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README.dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code of Conduct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -705,10 +759,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-install" class="md-nav__link">
+  <a href="#you-have-a-question" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Development install
+        You have a question
       
     </span>
   </a>
@@ -716,38 +770,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-tests" class="md-nav__link">
+  <a href="#you-think-you-may-have-found-a-bug" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the tests
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running the tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-coverage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Test coverage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-linters-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running linters locally
+        You think you may have found a bug
       
     </span>
   </a>
@@ -755,10 +781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cleaning-notebooks" class="md-nav__link">
+  <a href="#you-want-to-make-some-kind-of-change-to-the-code-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cleaning notebooks
+        You want to make some kind of change to the code base
       
     </span>
   </a>
@@ -766,63 +792,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testing-docs-locally" class="md-nav__link">
+  <a href="#you-want-to-make-a-new-release-of-the-code-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Testing docs locally
+        You want to make a new release of the code base
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Versioning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#making-a-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Making a release
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Making a release">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#12-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (1/2) Preparation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        (2/2) GitHub
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -846,117 +822,78 @@
   
 
 
-<h1 id="mibisite-developer-documentation"><code>mibisite</code> developer documentation</h1>
-<p>If you&rsquo;re looking for user documentation, go <a href="README.md">here</a>.</p>
-<h2 id="development-install">Development install</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Create a virtual environment, e.g. with</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># activate virtual environment</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">source</span><span class="w"> </span>env/bin/activate
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># make sure to have a recent version of pip and setuptools</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>setuptools
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># (from the project root directory)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># install mibisite as an editable package</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>--editable<span class="w"> </span>.
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># install development dependencies</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>--editable<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
-</code></pre></div>
-<p>Afterwards check that the install directory is present in the <code>PATH</code> environment variable.</p>
-<h2 id="running-the-tests">Running the tests</h2>
-<p>There are two ways to run tests.</p>
-<p>The first way requires an activated virtual environment with the development tools installed:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pytest<span class="w"> </span>-v
-</code></pre></div>
-<p>The second is to use <code>tox</code>, which can be installed separately (e.g. with <code>pip install tox</code>), i.e. not necessarily inside the virtual environment you use for installing <code>mibisite</code>, but then builds the necessary virtual environments itself by simply running:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tox
-</code></pre></div>
-<p>Testing with <code>tox</code> allows for keeping the testing environment separate from your development environment.
-The development environment will typically accumulate (old) packages during development that interfere with testing; this problem is avoided by testing with <code>tox</code>.</p>
-<h3 id="test-coverage">Test coverage</h3>
-<p>In addition to just running the tests to see if they pass, they can be used for coverage statistics, i.e. to determine how much of the package&rsquo;s code is actually executed during tests.
-In an activated virtual environment with the development tools installed, inside the package directory, run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>coverage<span class="w"> </span>run
-</code></pre></div>
-<p>This runs tests and stores the result in a <code>.coverage</code> file.
-To see the results on the command line, run</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>coverage<span class="w"> </span>report
-</code></pre></div>
-<p><code>coverage</code> can also generate output in HTML and other formats; see <code>coverage help</code> for more information.</p>
-<h2 id="running-linters-locally">Running linters locally</h2>
-<p>For linting and sorting imports we will use <a href="https://beta.ruff.rs/docs/">ruff</a>. Running the linters requires an 
-activated virtual environment with the development tools installed.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># linter</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ruff<span class="w"> </span>check<span class="w"> </span>.
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># linter with automatic fixing</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>ruff<span class="w"> </span>check<span class="w"> </span>.<span class="w"> </span>--fix
-</code></pre></div>
-<p>To fix readability of your code style you can use <a href="https://github.com/google/yapf">yapf</a>.</p>
-<p>You can enable automatic linting with <code>ruff</code> on commit by enabling the git hook from <code>.githooks/pre-commit</code>, like so:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>core.hooksPath<span class="w"> </span>.githooks
-</code></pre></div>
-<h2 id="cleaning-notebooks">Cleaning notebooks</h2>
-<p>The linter tests now also check that the example notebooks are &ldquo;clean&rdquo;. This means they do not contain the output and execution metadata that
-Jupyter adds when you execute them. Removing this reduces the size and noisiness of the diffs and consequently makes reviewing changes easier.</p>
-<p>To clean the notebooks locally before each commit, you can use the <code>nb-clean</code> tool, which is listed as one of the <code>[dev]</code> dependencies of the project. They are installable
-with:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python -m pip install .[dev]
-</code></pre></div></p>
-<p>You can then run:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nb-clean add-filter
-</code></pre></div>
-This adds a git hook that will automatically clean any staged notebooks before they are committed. If you would rather run this manually, you can instead use:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nb-clean clean mynotebook.ipynb
-</code></pre></div>
-replacing with the name of the notebook in question.</p>
-<h2 id="testing-docs-locally">Testing docs locally</h2>
-<p>To build the documentation locally, first make sure <code>mkdocs</code> and its dependencies are installed:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>.<span class="o">[</span>doc<span class="o">]</span>
-</code></pre></div></p>
-<p>Then you can build the documentation and serve it locally with
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>mkdocs<span class="w"> </span>serve
-</code></pre></div></p>
-<p>This will return a URL (e.g. <code>http://127.0.0.1:8000/mibisite/</code>) where the docs site can be viewed.</p>
-<p>Note that this will only create the &ldquo;non-versioned&rdquo; documentation, which should be fine for testing changes to the docs.
-The versioned documentation is created using the python utility called <a href="https://github.com/jimporter/mike?tab=readme-ov-file#mike">mike</a> and its corresponding <a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/">mkdocs integration</a>.
-In general it should not be necessary to test this, but if necessary, use <a href="https://github.com/jimporter/mike?tab=readme-ov-file#viewing-your-docs">the mike documentation</a> to inspect locally.</p>
-<h2 id="versioning">Versioning</h2>
-<p>Bumping the version across all files is done with <a href="https://github.com/callowayproject/bump-my-version">bump-my-version</a>, e.g.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>bump-my-version<span class="w"> </span>bump<span class="w"> </span>major<span class="w">  </span><span class="c1"># bumps from e.g. 0.3.2 to 1.0.0</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>bump-my-version<span class="w"> </span>bump<span class="w"> </span>minor<span class="w">  </span><span class="c1"># bumps from e.g. 0.3.2 to 0.4.0</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>bump-my-version<span class="w"> </span>bump<span class="w"> </span>patch<span class="w">  </span><span class="c1"># bumps from e.g. 0.3.2 to 0.3.3</span>
-</code></pre></div>
-<h2 id="making-a-release">Making a release</h2>
+<h1 id="contributing-guidelines">Contributing guidelines</h1>
+<p>We welcome any kind of contribution to our software, from simple comment or question to a full fledged <a href="https://help.github.com/articles/about-pull-requests/">pull request</a>. Please read and follow our <a href="../CODE_OF_CONDUCT/">Code of Conduct</a>.</p>
+<p>A contribution can be one of the following cases:</p>
+<ol>
+<li>you have a question;</li>
+<li>you think you may have found a bug (including unexpected behavior);</li>
+<li>you want to make some kind of change to the code base (e.g. to fix a bug, to add a new feature, to update documentation);</li>
+<li>you want to make a new release of the code base.</li>
+</ol>
+<p>The sections below outline the steps in each case.</p>
+<h2 id="you-have-a-question">You have a question</h2>
+<ol>
+<li>use the search functionality <a href="https://github.com/MiBiPreT/mibisite/issues">here</a> to see if someone already filed the same issue;</li>
+<li>if your issue search did not yield any relevant results, make a new issue;</li>
+<li>apply the &ldquo;Question&rdquo; label; apply other labels when relevant.</li>
+</ol>
+<h2 id="you-think-you-may-have-found-a-bug">You think you may have found a bug</h2>
+<ol>
+<li>use the search functionality <a href="https://github.com/MiBiPreT/mibisite/issues">here</a> to see if someone already filed the same issue;</li>
+<li>if your issue search did not yield any relevant results, make a new issue, making sure to provide enough information to the rest of the community to understand the cause and context of the problem. Depending on the issue, you may want to include:<ul>
+<li>the <a href="https://help.github.com/articles/autolinked-references-and-urls/#commit-shas">SHA hashcode</a> of the commit that is causing your problem;</li>
+<li>some identifying information (name and version number) for dependencies you&rsquo;re using;</li>
+<li>information about the operating system;</li>
+</ul>
+</li>
+<li>apply relevant labels to the newly created issue.</li>
+</ol>
+<h2 id="you-want-to-make-some-kind-of-change-to-the-code-base">You want to make some kind of change to the code base</h2>
+<ol>
+<li>(<strong>important</strong>) announce your plan to the rest of the community <em>before you start working</em>. This announcement should be in the form of a (new) issue;</li>
+<li>(<strong>important</strong>) wait until some kind of consensus is reached about your idea being a good idea;</li>
+<li>if needed, fork the repository to your own Github profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the &lsquo;upstream&rsquo; repository (follow the instructions <a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/">here</a> and <a href="https://help.github.com/articles/syncing-a-fork/">here</a>);</li>
+<li>install dependencies (see the <a href="../README.dev/#development_install">development documentation</a>);</li>
+<li>make sure the existing tests still work by running <code>pytest</code>;</li>
+<li>add your own tests (if necessary);</li>
+<li>
+<p>update or expand the documentation;</p>
+</li>
+<li>
+<p><a href="http://rogerdudler.github.io/git-guide/">push</a> your feature branch to (your fork of) the mibisite repository on GitHub;</p>
+</li>
+<li>create the pull request, e.g. following the instructions <a href="https://help.github.com/articles/creating-a-pull-request/">here</a>.</li>
+</ol>
+<p>In case you feel like you&rsquo;ve made a valuable contribution, but you don&rsquo;t know how to write or run tests for it, or how to generate the documentation: don&rsquo;t let this discourage you from making the pull request; we can help you! Just go ahead and submit the pull request, but keep in mind that you might be asked to append additional commits to your pull request.</p>
+<h2 id="you-want-to-make-a-new-release-of-the-code-base">You want to make a new release of the code base</h2>
 <p>To create a release you need write permission on the repository.</p>
-<p>This section describes how to make a release:</p>
 <ol>
-<li>preparation</li>
-<li>making a release on GitHub</li>
-</ol>
-<h3 id="12-preparation">(1/2) Preparation</h3>
-<ol>
-<li>Checkout the main branch locally</li>
-<li>Verify that the information (especially the author list) in <code>CITATION.cff</code> is correct.</li>
-<li>Make sure the <a href="#versioning">version has been updated</a>.</li>
-<li>Run the unit tests with <code>pytest -v</code></li>
-<li>Make sure the <a href="#testing-docs-locally">docs build and look good</a></li>
-</ol>
-<h3 id="22-github">(2/2) GitHub</h3>
-<p>When all is well, navigate to the <a href="https://github.com/MiBiPreT/mibisite/releases">releases on GitHub</a>.</p>
-<ol>
+<li>Check the author list in <a href="https://github.com/MiBiPreT/mibisite/blob/main/CITATION.cff"><code>CITATION.cff</code></a></li>
+<li>
+<p>Bump the version using <code>bump-my-version bump &lt;major|minor|patch&gt;</code>. For example, <code>bump-my-version bump major</code> will increase major version numbers everywhere it&rsquo;s needed (code, meta, etc.) in the repo. Alternatively the version can be manually changed in mibisite/<strong>init</strong>.py, pyproject.toml, CITATION.cffand docs/conf.py (and other places it was possibly added).</p>
+</li>
+<li>
+<p>Go to the <a href="https://github.com/MiBiPreT/mibisite/releases">GitHub release page</a></p>
+</li>
 <li>Press draft a new release button</li>
-<li>Select the &ldquo;Choose a tag&rdquo; drop down and write out the new version (e.g. v1.3.2)</li>
-<li>Press &ldquo;Generate release notes&rdquo; to automatically fill the title (with the version number) and generate a description (the changelog from the merge pull requests)</li>
-<li>Press the Publish release button</li>
+<li>Fill version, title and description field</li>
+<li>Press the Publish Release button</li>
 </ol>
-<p>This will create the release on github and automatically trigger:</p>
-<ol>
-<li>The <code>.github/workflows/publish.yml</code> workflow which will build the package and publish it on PyPI</li>
-<li>The Zenodo-Github integration into making a snapshot of your repository and sticking a DOI on it and adding the new version to the main Zenodo entry for your software.</li>
-</ol>
+<!--
+For projects that automatically publish to PyPI using a release or publish workflow, something like the following could be useful to add (make sure to replace the names and links):
+
+1. Wait until [PyPi publish workflow](https://github.com/MiBiPreT/mibisite/actions/workflows/publish.yml) has completed
+1. Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)
+-->
+<!--
+For projects that also build conda packages, e.g. on conda-forge or Bioconda, something like the following could be useful to add (example taken from matchms, make sure to replace the names and links):
+
+1. Wait until new release is also on Bioconda (https://anaconda.org/bioconda/mibisite) via a automaticly created PR on [bioconda recipes repo](https://github.com/bioconda/bioconda-recipes/pulls?q=is%3Apr+is%3Aopen+mibisite)
+1. Test mibisite from bioconda by manually running [Conda verify](https://github.com/MiBiPreT/mibisite/actions/workflows/conda_verify.yml) workflow
+-->
+
+<p>Also a Zenodo entry will be made for the release with its own DOI.</p>
 
 
 
@@ -1032,10 +969,10 @@ In general it should not be necessary to test this, but if necessary, use <a hre
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../assets/fontawesome.min.js"></script>
       
@@ -1046,5 +983,112 @@ In general it should not be necessary to test this, but if necessary, use <a hre
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script data-mkdocs-jupyter-mathjax="{&quot;url&quot;: &quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe&quot;, &quot;version&quot;: 4}">
+/* Shared by full pages and Material's instant navigation. */
+(() => {
+  const config = JSON.parse(document.currentScript.dataset.mkdocsJupyterMathjax);
+  if (window.mkdocsJupyterMathJax) return;
+
+  let loading;
+  let queue = Promise.resolve();
+  let previous = [];
+
+  const ready = async () => {
+    if (!loading) {
+      loading = (async () => {
+        let math = window.MathJax;
+        if (!math?.typesetPromise) {
+          const url = new URL(config.url, document.baseURI).href;
+          const existing = Array.from(document.scripts).find(script =>
+            script.src && (script.src === url || script.id === 'MathJax-script' ||
+              (/mathjax/i.test(script.src) &&
+               /\/(?:MathJax|latest|(?:tex|mml)(?:-mml)?-(?:chtml|svg))\.js(?:[?#]|$)/i.test(script.src))));
+          if (existing) {
+            if (!math?.startup?.promise) {
+              await new Promise((resolve, reject) => {
+                existing.addEventListener('load', resolve, { once: true });
+                existing.addEventListener('error', reject, { once: true });
+              });
+            }
+          } else {
+            // Keep site macros, delimiters and startup hooks when supplied.
+            const options = math || {};
+            window.MathJax = {
+              ...options,
+              loader: {
+                ...options.loader,
+                load: Array.from(new Set(['ui/safe', ...(options.loader?.load || [])]))
+              },
+              startup: { typeset: false, ...options.startup },
+              tex: {
+                tags: 'ams',
+                useLabelIds: true,
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                ...options.tex
+              }
+            };
+            await new Promise((resolve, reject) => {
+              const script = document.createElement('script');
+              script.src = config.url;
+              script.id = 'MathJax-script';
+              script.async = true;
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.appendChild(script);
+            });
+          }
+        }
+        math = window.MathJax;
+        await math.startup.promise;
+        return math;
+      })();
+    }
+    const math = await loading;
+    // A site owner can extend the v3 queue again on each navigation.
+    await math.startup.promise;
+    return math;
+  };
+
+  const unrendered = node => {
+    if (node.matches('mjx-container')) return [];
+    if (!node.querySelector('mjx-container')) return [node];
+    // In v3, scanning generated assistive MathML again produces nested output.
+    return Array.from(node.children).flatMap(unrendered);
+  };
+
+  const refresh = () => {
+    // A separate chain also serializes v3, without changing v4's startup promise.
+    queue = queue.then(async () => {
+      const notebooks = Array.from(document.querySelectorAll('.jupyter-wrapper'));
+      if (!notebooks.length && !previous.length) return;
+      if (notebooks.length === previous.length &&
+          notebooks.every((node, index) => node === previous[index])) return;
+      const math = await ready();
+      if (previous.length) {
+        math.typesetClear(previous);
+        math.texReset();
+      }
+      previous = notebooks.filter(node => node.isConnected);
+      const pending = previous.flatMap(unrendered);
+      if (pending.length) await math.typesetPromise(pending);
+    }).catch(error => console.error('mkdocs-jupyter: MathJax rendering failed', error));
+    return queue;
+  };
+
+  window.mkdocsJupyterMathJax = { refresh };
+  const start = () => {
+    if (typeof document$ !== 'undefined') document$.subscribe(refresh);
+    else refresh();
+  };
+  // Theme bundles and user-provided MathJax scripts can follow notebook content.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else start();
+})();
+
+</script>
+</body>
 </html>

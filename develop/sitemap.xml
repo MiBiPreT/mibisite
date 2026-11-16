@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://MiBiPreT.github.io/mibisite/develop/</loc>
-         <lastmod>2026-09-28</lastmod>
+         <lastmod>2026-11-16</lastmod>
     </url>
     <url>
-         <loc>https://MiBiPreT.github.io/mibisite/develop/development/</loc>
-         <lastmod>2026-09-28</lastmod>
+         <loc>https://MiBiPreT.github.io/mibisite/develop/CODE_OF_CONDUCT/</loc>
+         <lastmod>2026-11-16</lastmod>
+    </url>
+    <url>
+         <loc>https://MiBiPreT.github.io/mibisite/develop/CONTRIBUTING/</loc>
+         <lastmod>2026-11-16</lastmod>
+    </url>
+    <url>
+         <loc>https://MiBiPreT.github.io/mibisite/develop/README.dev/</loc>
+         <lastmod>2026-11-16</lastmod>
     </url>
     <url>
          <loc>https://MiBiPreT.github.io/mibisite/develop/reference/</loc>
-         <lastmod>2026-09-28</lastmod>
+         <lastmod>2026-11-16</lastmod>
     </url>
     <url>
          <loc>https://MiBiPreT.github.io/mibisite/develop/user/</loc>
-         <lastmod>2026-09-28</lastmod>
+         <lastmod>2026-11-16</lastmod>
     </url>
     <url>
          <loc>https://MiBiPreT.github.io/mibisite/develop/examples/basic_use_of_mibisite/</loc>
-         <lastmod>2026-09-28</lastmod>
+         <lastmod>2026-11-16</lastmod>
     </url>
 </urlset>
